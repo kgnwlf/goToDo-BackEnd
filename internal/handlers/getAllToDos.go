@@ -25,12 +25,12 @@ import (
 
 func sayHello (w http.ResponseWriter, r *http.Request) {
 	var err error
-	var response string = "Henlo friend."
+	var response string = "Hey there."
 
 	w.Header().Set("Content-Type", "application/json")
 	err = json.NewEncoder(w).Encode(response)
 
-	if err != nil {
+	if (err != nil) {
 		log.Error(err)
 	}
 
